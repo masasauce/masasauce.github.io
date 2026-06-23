@@ -1,1 +1,278 @@
-<h1>Hello, GitHub Pages!</h1>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ear Recorder - サポート & プライバシー</title>
+    <!-- Google Fonts: Outfit & Noto Sans JP -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-black: #000000;
+            --color-dark-bg: #09090b;
+            --color-card-bg: #121215;
+            --color-border: #1f1f24;
+            --color-text-primary: #ffffff;
+            --color-text-secondary: #a1a1aa;
+            --color-text-muted: #52525b;
+            --color-accent: #ff3b30;
+            --color-accent-blue: #007aff;
+            --font-title: 'Outfit', 'Noto Sans JP', sans-serif;
+            --font-body: 'Noto Sans JP', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--color-black);
+            background-image: radial-gradient(circle at top, #18181b 0%, var(--color-black) 70%);
+            color: var(--color-text-primary);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            padding: 0;
+        }
+
+        header {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .logo {
+            font-family: var(--font-title);
+            font-weight: 800;
+            font-size: 24px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--color-text-primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--color-accent);
+            border-radius: 50%;
+        }
+
+        .nav-links a {
+            color: var(--color-text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--color-text-primary);
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .hero h1 {
+            font-family: var(--font-title);
+            font-size: 48px;
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 16px;
+            background: linear-gradient(180deg, #ffffff 0%, #a1a1aa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--color-text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+
+        .section-title {
+            font-family: var(--font-title);
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--color-border);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .section-title::before {
+            content: "";
+            display: inline-block;
+            width: 4px;
+            height: 16px;
+            background-color: var(--color-accent);
+            border-radius: 2px;
+        }
+
+        .card {
+            background-color: var(--color-card-bg);
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+        }
+
+        .faq-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .faq-question {
+            font-weight: 700;
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: var(--color-text-primary);
+        }
+
+        .faq-answer {
+            color: var(--color-text-secondary);
+            font-size: 14px;
+        }
+
+        .contact-box {
+            text-align: center;
+            background: linear-gradient(135deg, #121215 0%, #09090b 100%);
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            padding: 40px 20px;
+        }
+
+        .contact-email {
+            font-family: var(--font-title);
+            font-size: 24px;
+            color: var(--color-accent-blue);
+            text-decoration: none;
+            font-weight: 600;
+            margin: 16px 0;
+            display: inline-block;
+            transition: opacity 0.2s ease;
+        }
+
+        .contact-email:hover {
+            opacity: 0.8;
+        }
+
+        footer {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 1px solid var(--color-border);
+            color: var(--color-text-muted);
+            font-size: 12px;
+        }
+
+        footer a {
+            color: var(--color-text-secondary);
+            text-decoration: none;
+            margin-left: 16px;
+        }
+
+        footer a:hover {
+            color: var(--color-text-primary);
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+            .hero p {
+                font-size: 16px;
+            }
+            .contact-email {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <span class="logo-dot"></span>
+            Ear Recorder
+        </div>
+        <div class="nav-links">
+            <a href="privacy.html">プライバシーポリシー</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Ear Recorder Support</h1>
+            <p>耳に当てるだけで自動録音、離すと自動保存。シンプルで高セキュリティなオフライン音声メモアプリ。</p>
+        </section>
+
+        <section id="faq">
+            <h2 class="section-title">よくあるご質問 (FAQ)</h2>
+            <div class="card">
+                <div class="faq-item">
+                    <h3 class="faq-question">Q. 録音はどうやって開始しますか？</h3>
+                    <p class="faq-answer">A. アプリを起動した状態で、iPhoneを耳に近づける（受話器を耳に当てるように持ち上げる）と、近接センサーが検知して自動的に録音と文字起こしが開始されます。</p>
+                </div>
+                <hr style="border: 0; border-top: 1px solid var(--color-border); margin: 20px 0;">
+                <div class="faq-item">
+                    <h3 class="faq-question">Q. 録音の保存方法は？</h3>
+                    <p class="faq-answer">A. iPhoneを耳から離すと、自動で録音が停止し、音声ファイルと文字起こし結果が保存されます。保存完了時には短い振動（ハプティクス）でお知らせします。</p>
+                </div>
+                <hr style="border: 0; border-top: 1px solid var(--color-border); margin: 20px 0;">
+                <div class="faq-item">
+                    <h3 class="faq-question">Q. 録音した音声や文字起こしは外部に送信されますか？</h3>
+                    <p class="faq-answer">A. いいえ。すべての音声データおよび文字起こしテキストは、端末内のローカルストレージにのみ保存されます。外部のサーバーへ送信されることはなく、完全オフラインで動作するためプライバシーも安全です。</p>
+                </div>
+                <hr style="border: 0; border-top: 1px solid var(--color-border); margin: 20px 0;">
+                <div class="faq-item">
+                    <h3 class="faq-question">Q. 文字起こしのテキストを修正できますか？</h3>
+                    <p class="faq-answer">A. はい。保存された録音項目をタップして展開し、「編集」ボタンを押すことで、文字起こしされた内容をその場で手動編集・保存することができます。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2 class="section-title">お問い合わせサポート</h2>
+            <div class="contact-box">
+                <p>アプリの不具合報告、機能要望、その他のお問い合わせは、以下のメールアドレスまで直接ご連絡ください。</p>
+                <a href="mailto:masatx@gmail.com" class="contact-email">masatx@gmail.com</a>
+                <p style="font-size: 13px; color: var(--color-text-secondary);">通常1〜3営業日以内にご返信いたします。</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Masa. All rights reserved.</p>
+        <p style="margin-top: 8px;">
+            <a href="privacy.html">プライバシーポリシー</a>
+        </p>
+    </footer>
+
+</body>
+</html>
