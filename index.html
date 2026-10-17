@@ -2,49 +2,897 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
-  <meta name="description" content="Masasauce AppsのEar RecorderとAudioVisualizerの使い方・サポート情報" />
+  <meta name="description" content="Masasauce AppsのEar Recorder、AudioVisualizer、Video Info Intro Makerの使い方・サポート情報" />
   <title>Masasauce Apps Support</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
-    /* Standalone export: the brand mark and card artwork use inline SVG, so this file does not depend on hosted images. */
-    .wordmark svg{width:34px;height:34px;filter:drop-shadow(0 0 8px rgba(255,59,48,.3))}.artwork svg{display:block;width:100%;height:100%}@media(max-width:720px){.wordmark svg{width:27px;height:27px}}
-    :root{--red:#ff3b30;--blue:#65aaff;--border:#1f1f24;--sub:#a1a1aa;--card:#121215}*{box-sizing:border-box}html{scroll-behavior:smooth;background:#000}body{margin:0;background:#000;color:#fff;font-family:"Noto Sans JP",sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit}.site-header,footer{width:min(1120px,calc(100% - 40px));margin:auto;border-color:var(--border)}.site-header{height:102px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border)}.wordmark{display:inline-flex;align-items:center;gap:12px;text-decoration:none;font:800 18px/1 Outfit,sans-serif;letter-spacing:.19em}.wordmark img{width:34px;height:34px;filter:drop-shadow(0 0 8px rgba(255,59,48,.3))}.wordmark span{position:relative}.wordmark span:after{content:"";position:absolute;left:0;right:.19em;bottom:-8px;height:1px;background:linear-gradient(90deg,var(--red) 0 28%,transparent 28% 42%,var(--red) 42%);opacity:.72}nav{display:flex;gap:26px}nav a{color:var(--sub);font:500 13px/1 Outfit,sans-serif;letter-spacing:.06em;text-decoration:none}nav a:hover{color:#fff}.hero{min-height:510px;position:relative;display:grid;place-items:center;overflow:hidden;text-align:center;background:linear-gradient(120deg,rgba(48,7,5,.65),#08080a 42%,#03060b)}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent,#000 95%)}.hero-copy{position:relative;z-index:1;padding:80px 20px 96px}.kicker,.app-label,.faq-eyebrow{display:inline-flex;align-items:center;gap:8px;font:700 12px/1 Outfit,sans-serif;letter-spacing:.14em}.kicker{color:var(--sub);margin:0 0 22px;text-transform:uppercase}.dot{width:7px;height:7px;border-radius:50%;background:var(--red);box-shadow:0 0 14px rgba(255,59,48,.55)}.blue .dot{background:#3a93ff;box-shadow:0 0 14px rgba(58,147,255,.6)}h1{margin:0;font:800 clamp(48px,7vw,80px)/1.02 Outfit,"Noto Sans JP",sans-serif;letter-spacing:-.055em;background:linear-gradient(180deg,#fff 18%,#9a9aa3 118%);-webkit-background-clip:text;background-clip:text;color:transparent}.hero-copy>p:last-child{max-width:680px;margin:26px auto 0;color:var(--sub);font-size:16px;line-height:2}.section{width:min(1000px,calc(100% - 40px));margin:auto;padding:66px 0}.section-title{display:flex;align-items:center;gap:10px;margin:0 0 26px;padding-bottom:13px;border-bottom:1px solid var(--border);font:700 25px/1.2 Outfit,"Noto Sans JP",sans-serif}.section-title:before{content:"";width:4px;height:19px;border-radius:3px;background:var(--red);box-shadow:0 0 13px rgba(255,59,48,.4)}.intro{margin:-8px 0 28px;color:var(--sub);font-size:14px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.app-card,.faq-panel{border:1px solid #26262d;border-radius:16px;background:linear-gradient(145deg,rgba(24,24,28,.96),rgba(11,11,13,.96));box-shadow:inset 0 1px 0 rgba(255,255,255,.025),0 18px 44px rgba(0,0,0,.18)}.app-card{min-height:545px;padding:22px;display:flex;flex-direction:column;transition:transform .22s ease,border-color .22s ease}.app-card:hover{transform:translateY(-5px);border-color:#3e3e47}.card-top{display:flex;justify-content:space-between;align-items:center;color:#81818a}.app-label{color:#f5f5f5}.card-icon{font-size:18px}.artwork{height:170px;margin-top:18px;overflow:hidden;border:1px solid rgba(255,255,255,.045);border-radius:11px;background:#0c0c0e}.artwork img{display:block;width:100%;height:100%;object-fit:cover}.app-copy{padding-top:25px}.app-copy h3{margin:0;font:700 26px/1.25 Outfit,"Noto Sans JP",sans-serif;letter-spacing:-.03em}.app-copy p{min-height:55px;margin:14px 0 0;color:var(--sub);font-size:13px;line-height:1.8}.features{display:flex;flex-wrap:wrap;gap:7px;margin-top:auto;padding-top:24px}.features span{border:1px solid #303037;border-radius:6px;padding:6px 9px;color:#b1b1b8;font-size:11px;line-height:1}.arrow-link{width:35px;height:35px;margin:22px 0 0 auto;display:grid;place-items:center;border:1px solid currentColor;border-radius:50%;color:#ff6b62;text-decoration:none}.arrow-link:hover{background:rgba(255,255,255,.06)}.arrow-link.blue{color:var(--blue)}.faq-section{padding-top:82px}.faq-panel{height:100%;padding:25px 24px 12px}.faq-panel h3{margin:13px 0 17px;font:700 23px/1.2 Outfit,"Noto Sans JP",sans-serif;letter-spacing:-.025em}.faq-list{border-top:1px solid #27272d}.faq-item{border-bottom:1px solid #27272d}.faq-question{width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:15px 0;border:0;background:none;color:#f5f5f5;text-align:left;font:700 13px/1.6 "Noto Sans JP",sans-serif;cursor:pointer}.faq-question:after{content:"+";color:#ff6b62;font:400 20px/1 Outfit,sans-serif;transition:transform .18s ease}.faq-panel.blue .faq-question:after{color:var(--blue)}.faq-question[aria-expanded="true"]:after{transform:rotate(45deg)}.faq-answer{display:grid;grid-template-rows:0fr;transition:grid-template-rows .2s ease}.faq-answer>div{min-height:0;overflow:hidden;color:var(--sub);font-size:13px;line-height:1.85}.faq-item.open .faq-answer{grid-template-rows:1fr}.faq-item.open .faq-answer>div{padding-bottom:16px}.contact{position:relative;padding-bottom:94px}.contact:after{content:"∿╱╲╱";position:absolute;right:0;top:48px;color:rgba(255,59,48,.44);font:500 46px/1 Outfit,sans-serif;letter-spacing:-.25em}.contact-card{min-height:205px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:34px 20px;border:1px solid #25252c;border-radius:14px;background:linear-gradient(135deg,#121215,#09090b);text-align:center}.contact-card p{margin:0;color:#b1b1b8;font-size:14px}.mail{margin:15px 0 8px;color:#ff6b62;font:600 24px/1 Outfit,"Noto Sans JP",sans-serif;text-decoration:none}.contact-card small{color:#74747e;font-size:12px}footer{min-height:104px;padding:26px 0;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;color:#62626c;font-size:12px}footer a{color:var(--sub);text-decoration:none}@media(max-width:720px){.site-header,footer{width:min(100% - 32px,1120px)}.site-header{height:78px}.wordmark{font-size:15px;letter-spacing:.13em}.wordmark img{width:27px;height:27px}nav{gap:15px}nav a{font-size:11px}.hero{min-height:440px}.hero-copy{padding:72px 20px 79px}.hero-copy>p:last-child{font-size:14px;line-height:1.9}.section{width:min(100% - 32px,1000px);padding:52px 0}.section-title{font-size:22px}.grid{grid-template-columns:1fr;gap:16px}.app-card{min-height:500px}.artwork{height:158px}.faq-section{padding-top:60px}.contact{padding-bottom:65px}.contact:after{right:0;top:45px;font-size:37px}.mail{font-size:20px}footer{min-height:88px}}
+    :root {
+      --red: #ff3b30;
+      --blue: #65aaff;
+      --amber: #ff9f0a;
+      --border: #1f1f24;
+      --sub: #a1a1aa;
+      --card: #121215;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background: #000;
+    }
+
+    body {
+      margin: 0;
+      background: #000;
+      color: #fff;
+      font-family: "Noto Sans JP", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    /* Header & Footer */
+    .site-header, footer {
+      width: min(1200px, calc(100% - 40px));
+      margin: auto;
+      border-color: var(--border);
+    }
+
+    .site-header {
+      height: 102px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .wordmark {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      font: 800 18px/1 Outfit, sans-serif;
+      letter-spacing: .19em;
+    }
+
+    .wordmark svg {
+      width: 34px;
+      height: 34px;
+      filter: drop-shadow(0 0 8px rgba(255, 59, 48, .3));
+    }
+
+    .wordmark span {
+      position: relative;
+    }
+
+    .wordmark span:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: .19em;
+      bottom: -8px;
+      height: 1px;
+      background: linear-gradient(90deg, var(--red) 0 28%, transparent 28% 42%, var(--red) 42%);
+      opacity: .72;
+    }
+
+    nav {
+      display: flex;
+      gap: 26px;
+    }
+
+    nav a {
+      color: var(--sub);
+      font: 500 13px/1 Outfit, sans-serif;
+      letter-spacing: .06em;
+      text-decoration: none;
+      transition: color .15s ease;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 520px;
+      position: relative;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      text-align: center;
+      background: linear-gradient(120deg, rgba(48, 7, 5, .6), #08080a 45%, #03060b);
+    }
+
+    .hero:after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent, #000 95%);
+    }
+
+    .hero-copy {
+      position: relative;
+      z-index: 1;
+      padding: 84px 20px 96px;
+    }
+
+    .kicker, .app-label, .faq-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font: 700 12px/1 Outfit, sans-serif;
+      letter-spacing: .14em;
+    }
+
+    .kicker {
+      color: var(--sub);
+      margin: 0 0 22px;
+      text-transform: uppercase;
+    }
+
+    .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--red);
+      box-shadow: 0 0 14px rgba(255, 59, 48, .55);
+    }
+
+    .blue .dot {
+      background: #3a93ff;
+      box-shadow: 0 0 14px rgba(58, 147, 255, .6);
+    }
+
+    .amber .dot {
+      background: var(--amber);
+      box-shadow: 0 0 14px rgba(255, 159, 10, .6);
+    }
+
+    h1 {
+      margin: 0;
+      font: 800 clamp(44px, 6.5vw, 76px)/1.05 Outfit, "Noto Sans JP", sans-serif;
+      letter-spacing: -.055em;
+      background: linear-gradient(180deg, #fff 18%, #9a9aa3 118%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-copy > p:last-child {
+      max-width: 720px;
+      margin: 26px auto 0;
+      color: var(--sub);
+      font-size: 16px;
+      line-height: 2;
+    }
+
+    /* Sections */
+    .section {
+      width: min(1200px, calc(100% - 40px));
+      margin: auto;
+      padding: 70px 0;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 26px;
+      padding-bottom: 13px;
+      border-bottom: 1px solid var(--border);
+      font: 700 25px/1.2 Outfit, "Noto Sans JP", sans-serif;
+    }
+
+    .section-title:before {
+      content: "";
+      width: 4px;
+      height: 19px;
+      border-radius: 3px;
+      background: var(--red);
+      box-shadow: 0 0 13px rgba(255, 59, 48, .4);
+    }
+
+    .intro {
+      margin: -8px 0 28px;
+      color: var(--sub);
+      font-size: 14px;
+    }
+
+    /* Grid (3 Cards on Desktop) */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    /* Cards */
+    .app-card, .faq-panel {
+      border: 1px solid #26262d;
+      border-radius: 16px;
+      background: linear-gradient(145deg, rgba(24, 24, 28, .96), rgba(11, 11, 13, .96));
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, .025), 0 18px 44px rgba(0, 0, 0, .18);
+    }
+
+    .app-card {
+      min-height: 560px;
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease;
+    }
+
+    .app-card:hover {
+      transform: translateY(-5px);
+      border-color: #3e3e47;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, .05), 0 22px 50px rgba(0, 0, 0, .3);
+    }
+
+    .app-card:active {
+      transform: scale(0.985);
+      transition: transform 100ms ease-out;
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #81818a;
+    }
+
+    .app-label {
+      color: #f5f5f5;
+    }
+
+    .card-icon {
+      font-size: 18px;
+    }
+
+    .artwork {
+      height: 170px;
+      margin-top: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, .045);
+      border-radius: 11px;
+      background: #0c0c0e;
+    }
+
+    .artwork svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .app-copy {
+      padding-top: 25px;
+    }
+
+    .app-copy h3 {
+      margin: 0;
+      font: 700 24px/1.3 Outfit, "Noto Sans JP", sans-serif;
+      letter-spacing: -.03em;
+    }
+
+    .app-copy p {
+      min-height: 55px;
+      margin: 14px 0 0;
+      color: var(--sub);
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: auto;
+      padding-top: 24px;
+    }
+
+    .features span {
+      border: 1px solid #303037;
+      border-radius: 6px;
+      padding: 6px 9px;
+      color: #b1b1b8;
+      font-size: 11px;
+      line-height: 1;
+    }
+
+    .arrow-link {
+      width: 35px;
+      height: 35px;
+      margin: 22px 0 0 auto;
+      display: grid;
+      place-items: center;
+      border: 1px solid currentColor;
+      border-radius: 50%;
+      color: #ff6b62;
+      text-decoration: none;
+      transition: background-color .18s ease, transform .18s ease;
+    }
+
+    .arrow-link:hover {
+      background: rgba(255, 255, 255, .08);
+      transform: scale(1.05);
+    }
+
+    .arrow-link.blue {
+      color: var(--blue);
+    }
+
+    .arrow-link.amber {
+      color: var(--amber);
+    }
+
+    /* FAQ */
+    .faq-section {
+      padding-top: 82px;
+    }
+
+    .faq-panel {
+      height: 100%;
+      padding: 25px 24px 16px;
+    }
+
+    .faq-panel h3 {
+      margin: 13px 0 17px;
+      font: 700 22px/1.2 Outfit, "Noto Sans JP", sans-serif;
+      letter-spacing: -.025em;
+    }
+
+    .faq-list {
+      border-top: 1px solid #27272d;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #27272d;
+    }
+
+    .faq-question {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 15px 0;
+      border: 0;
+      background: none;
+      color: #f5f5f5;
+      text-align: left;
+      font: 700 13px/1.6 "Noto Sans JP", sans-serif;
+      cursor: pointer;
+    }
+
+    .faq-question:after {
+      content: "+";
+      color: #ff6b62;
+      font: 400 20px/1 Outfit, sans-serif;
+      transition: transform .18s ease;
+    }
+
+    .faq-panel.blue .faq-question:after {
+      color: var(--blue);
+    }
+
+    .faq-panel.amber .faq-question:after {
+      color: var(--amber);
+    }
+
+    .faq-question[aria-expanded="true"]:after {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows .2s ease;
+    }
+
+    .faq-answer > div {
+      min-height: 0;
+      overflow: hidden;
+      color: var(--sub);
+      font-size: 13px;
+      line-height: 1.85;
+    }
+
+    .faq-item.open .faq-answer {
+      grid-template-rows: 1fr;
+    }
+
+    .faq-item.open .faq-answer > div {
+      padding-bottom: 16px;
+    }
+
+    /* Contact */
+    .contact {
+      position: relative;
+      padding-bottom: 94px;
+    }
+
+    .contact:after {
+      content: "∿╱╲╱";
+      position: absolute;
+      right: 0;
+      top: 48px;
+      color: rgba(255, 59, 48, .44);
+      font: 500 46px/1 Outfit, sans-serif;
+      letter-spacing: -.25em;
+    }
+
+    .contact-card {
+      min-height: 205px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 34px 20px;
+      border: 1px solid #25252c;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #121215, #09090b);
+      text-align: center;
+    }
+
+    .contact-card p {
+      margin: 0;
+      color: #b1b1b8;
+      font-size: 14px;
+    }
+
+    .mail {
+      margin: 15px 0 8px;
+      color: #ff6b62;
+      font: 600 24px/1 Outfit, "Noto Sans JP", sans-serif;
+      text-decoration: none;
+      transition: opacity .15s ease;
+    }
+
+    .mail:hover {
+      opacity: .85;
+    }
+
+    .contact-card small {
+      color: #74747e;
+      font-size: 12px;
+    }
+
+    footer {
+      min-height: 104px;
+      padding: 26px 0;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #62626c;
+      font-size: 12px;
+    }
+
+    footer a {
+      color: var(--sub);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #fff;
+    }
+
+    /* Responsive */
+    @media (max-width: 960px) {
+      .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .grid > :nth-child(3):last-child {
+        grid-column: 1 / -1;
+        max-width: 640px;
+        margin: 0 auto;
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .site-header, footer {
+        width: min(100% - 32px, 1200px);
+        height: 78px;
+      }
+      .wordmark {
+        font-size: 15px;
+        letter-spacing: .13em;
+      }
+      .wordmark svg {
+        width: 27px;
+        height: 27px;
+      }
+      nav {
+        gap: 15px;
+      }
+      nav a {
+        font-size: 11px;
+      }
+      .hero {
+        min-height: 440px;
+      }
+      .hero-copy {
+        padding: 72px 20px 79px;
+      }
+      .hero-copy > p:last-child {
+        font-size: 14px;
+        line-height: 1.9;
+      }
+      .section {
+        width: min(100% - 32px, 1200px);
+        padding: 52px 0;
+      }
+      .section-title {
+        font-size: 22px;
+      }
+      .grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .grid > :nth-child(3):last-child {
+        grid-column: auto;
+        max-width: none;
+      }
+      .app-card {
+        min-height: 500px;
+      }
+      .artwork {
+        height: 158px;
+      }
+      .faq-section {
+        padding-top: 60px;
+      }
+      .contact {
+        padding-bottom: 65px;
+      }
+      .contact:after {
+        right: 0;
+        top: 45px;
+        font-size: 37px;
+      }
+      .mail {
+        font-size: 20px;
+      }
+      footer {
+        min-height: 88px;
+      }
+    }
   </style>
 </head>
 <body>
   <header class="site-header">
-    <a href="#top" class="wordmark" aria-label="Masasauce Apps Supportの先頭へ"><svg viewBox="0 0 40 40" aria-hidden="true"><g fill="#ff3b30"><rect x="3" y="18" width="3" height="4" rx="1.5"/><rect x="9" y="13" width="3" height="14" rx="1.5"/><rect x="15" y="8" width="3" height="24" rx="1.5"/><rect x="21" y="12" width="3" height="16" rx="1.5"/><rect x="27" y="15" width="3" height="10" rx="1.5"/><rect x="33" y="18" width="3" height="4" rx="1.5"/></g></svg><span>MASASAUCE APPS</span></a>
-    <nav aria-label="主要ナビゲーション"><a href="#apps">Apps</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></nav>
+    <a href="#top" class="wordmark" aria-label="Masasauce Apps Supportの先頭へ">
+      <svg viewBox="0 0 40 40" aria-hidden="true">
+        <g fill="#ff3b30">
+          <rect x="3" y="18" width="3" height="4" rx="1.5"/>
+          <rect x="9" y="13" width="3" height="14" rx="1.5"/>
+          <rect x="15" y="8" width="3" height="24" rx="1.5"/>
+          <rect x="21" y="12" width="3" height="16" rx="1.5"/>
+          <rect x="27" y="15" width="3" height="10" rx="1.5"/>
+          <rect x="33" y="18" width="3" height="4" rx="1.5"/>
+        </g>
+      </svg>
+      <span>MASASAUCE APPS</span>
+    </a>
+    <nav aria-label="主要ナビゲーション">
+      <a href="#apps">Apps</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
+
   <main id="top">
-    <section class="hero"><div class="hero-copy"><p class="kicker"><i class="dot"></i>Masasauce Apps Support</p><h1>音のための、<br />二つのアプリ。</h1><p>録音を自然に残すためのEar Recorderと、音を目で楽しむためのAudioVisualizer。<br />使い方とサポート情報</p></div></section>
-    <section class="section" id="apps"><h2 class="section-title">アプリ</h2><div class="grid">
-      <article class="app-card"><div class="card-top"><p class="app-label"><i class="dot"></i>EAR RECORDER</p><span class="card-icon">⌁</span></div><div class="artwork"><svg viewBox="0 0 600 180" role="img" aria-label="赤い音声波形"><defs><linearGradient id="redWave"><stop stop-color="#8a1512"/><stop offset=".5" stop-color="#ff3b30"/><stop offset="1" stop-color="#8a1512"/></linearGradient></defs><rect width="600" height="180" fill="#0b0b0d"/><g fill="url(#redWave)"><rect x="55" y="80" width="10" height="20" rx="5"/><rect x="82" y="54" width="10" height="72" rx="5"/><rect x="109" y="68" width="10" height="44" rx="5"/><rect x="136" y="32" width="10" height="116" rx="5"/><rect x="163" y="58" width="10" height="64" rx="5"/><rect x="190" y="15" width="10" height="150" rx="5"/><rect x="217" y="43" width="10" height="94" rx="5"/><rect x="244" y="66" width="10" height="48" rx="5"/><rect x="271" y="30" width="10" height="120" rx="5"/><rect x="298" y="8" width="10" height="164" rx="5"/><rect x="325" y="33" width="10" height="114" rx="5"/><rect x="352" y="59" width="10" height="62" rx="5"/><rect x="379" y="42" width="10" height="96" rx="5"/><rect x="406" y="64" width="10" height="52" rx="5"/><rect x="433" y="78" width="10" height="24" rx="5"/><rect x="460" y="57" width="10" height="66" rx="5"/><rect x="487" y="75" width="10" height="30" rx="5"/><rect x="514" y="84" width="10" height="12" rx="5"/></g></svg></div><div class="app-copy"><h3>耳に当てるだけで、<br />音声メモが残る。</h3><p>近接センサーで録音と保存を自然につなぐ、プライベートなオフライン音声メモ。</p></div><div class="features"><span>自動録音</span><span>文字起こし</span><span>オフライン</span></div><a class="arrow-link" href="#ear-recorder-faq" aria-label="Ear RecorderのFAQへ移動" title="Ear RecorderのFAQへ移動">↗</a></article>
-      <article class="app-card blue"><div class="card-top"><p class="app-label"><i class="dot"></i>AUDIOVISUALIZER</p><span class="card-icon">≋</span></div><div class="artwork"><svg viewBox="0 0 600 180" role="img" aria-label="青紫の音声スペクトラム"><defs><linearGradient id="spectrum"><stop stop-color="#18b8ff"/><stop offset=".55" stop-color="#7767ff"/><stop offset="1" stop-color="#ee54d8"/></linearGradient></defs><rect width="600" height="180" fill="#090a11"/><g fill="url(#spectrum)"><rect x="55" y="72" width="10" height="36" rx="5"/><rect x="82" y="42" width="10" height="96" rx="5"/><rect x="109" y="58" width="10" height="64" rx="5"/><rect x="136" y="25" width="10" height="130" rx="5"/><rect x="163" y="48" width="10" height="84" rx="5"/><rect x="190" y="14" width="10" height="152" rx="5"/><rect x="217" y="37" width="10" height="106" rx="5"/><rect x="244" y="63" width="10" height="54" rx="5"/><rect x="271" y="31" width="10" height="118" rx="5"/><rect x="298" y="6" width="10" height="168" rx="5"/><rect x="325" y="35" width="10" height="110" rx="5"/><rect x="352" y="54" width="10" height="72" rx="5"/><rect x="379" y="28" width="10" height="124" rx="5"/><rect x="406" y="17" width="10" height="146" rx="5"/><rect x="433" y="47" width="10" height="86" rx="5"/><rect x="460" y="31" width="10" height="118" rx="5"/><rect x="487" y="65" width="10" height="50" rx="5"/><rect x="514" y="80" width="10" height="20" rx="5"/></g></svg></div><div class="app-copy"><h3>音を、リアルタイムに<br />目で楽しむ。</h3><p>マイクや音楽ファイルに反応するスペクトラムで、音の表情を鮮やかに可視化。</p></div><div class="features"><span>リアルタイム</span><span>ビジュアライザー</span><span>ファイル再生</span></div><a class="arrow-link blue" href="#audiovisualizer-faq" aria-label="AudioVisualizerのFAQへ移動" title="AudioVisualizerのFAQへ移動">↗</a></article>
-    </div></section>
-    <section class="section faq-section" id="faq"><h2 class="section-title">よくあるご質問</h2><p class="intro">アプリごとの使い方や保存方法、利用できる機能についてご案内します。</p><div class="grid">
-      <article class="faq-panel" id="ear-recorder-faq"><p class="faq-eyebrow"><i class="dot"></i>EAR RECORDER</p><h3>Ear Recorder FAQ</h3><div class="faq-list">
-        <div class="faq-item"><button class="faq-question" aria-expanded="false">録音はどうやって開始しますか？</button><div class="faq-answer"><div>アプリを起動した状態で、iPhoneを耳に近づけると近接センサーが検知し、録音と文字起こしが自動で始まります。</div></div></div>
-        <div class="faq-item"><button class="faq-question" aria-expanded="false">録音はどのように保存されますか？</button><div class="faq-answer"><div>iPhoneを耳から離すと録音が停止し、音声ファイルと文字起こし結果が端末内へ保存されます。保存完了は短いハプティクスでお知らせします。</div></div></div>
-        <div class="faq-item"><button class="faq-question" aria-expanded="false">音声や文字起こしは外部へ送信されますか？</button><div class="faq-answer"><div>いいえ。音声データと文字起こしテキストは端末内のローカルストレージに保存されます。外部サーバーへの送信は行いません。</div></div></div>
-        <div class="faq-item"><button class="faq-question" aria-expanded="false">文字起こしの内容を修正できますか？</button><div class="faq-answer"><div>はい。保存済みの録音を開き、「編集」から文字起こしテキストを手動で修正・保存できます。</div></div></div>
-      </div></article>
-      <article class="faq-panel blue" id="audiovisualizer-faq"><p class="faq-eyebrow"><i class="dot"></i>AUDIOVISUALIZER</p><h3>AudioVisualizer FAQ</h3><div class="faq-list">
-        <div class="faq-item"><button class="faq-question" aria-expanded="false">マイク入力を可視化するには？</button><div class="faq-answer"><div>画面の「マイクを開始」をタップし、初回のみマイクへのアクセスを許可してください。入力音声に合わせてリアルタイムに表示が変化します。</div></div></div>
-        <div class="faq-item"><button class="faq-question" aria-expanded="false">無料版では何が利用できますか？</button><div class="faq-answer"><div>無料版ではマイク入力のビジュアライザー、マイク感度の調整、全画面表示を利用できます。ファイル再生や詳細な表示設定はフル機能で利用できます。</div></div></div>
-        <div class="faq-item"><button class="faq-question" aria-expanded="false">音楽ファイルを再生して可視化できますか？</button><div class="faq-answer"><div>フル機能では、音声ファイルやフォルダを取り込み、再生キューとして連続再生・リピートしながら可視化できます。</div></div></div>
-        <div class="faq-item"><button class="faq-question" aria-expanded="false">設定した見た目は保存されますか？</button><div class="faq-answer"><div>ビジュアライザーの設定は端末内に保存され、次回起動時にも引き継がれます。無料版ではマイク感度のみ調整できます。</div></div></div>
-      </div></article>
-    </div></section>
-    <section class="section contact" id="contact"><h2 class="section-title">お問い合わせサポート</h2><div class="contact-card"><p>不具合のご報告や機能に関するご質問は、メールでお寄せください。</p><a class="mail" href="mailto:masatx@gmail.com">✉ masatx@gmail.com</a><small>通常1〜3営業日以内にご返信します。</small></div></section>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="kicker"><i class="dot"></i>Masasauce Apps Support</p>
+        <h1>音と映像のための、<br />三つのアプリ。</h1>
+        <p>録音を自然に残すEar Recorder、音を目で楽しむAudioVisualizer、<br />そして動画の冒頭にシネマティックな撮影情報を刻むVideo Info Intro Maker。<br />使い方とサポート情報</p>
+      </div>
+    </section>
+
+    <!-- Apps Section -->
+    <section class="section" id="apps">
+      <h2 class="section-title">アプリ</h2>
+      <div class="grid">
+        <!-- App 1: Ear Recorder -->
+        <article class="app-card">
+          <div class="card-top">
+            <p class="app-label"><i class="dot"></i>EAR RECORDER</p>
+            <span class="card-icon">⌁</span>
+          </div>
+          <div class="artwork">
+            <svg viewBox="0 0 600 180" role="img" aria-label="赤い音声波形">
+              <defs>
+                <linearGradient id="redWave">
+                  <stop stop-color="#8a1512"/>
+                  <stop offset=".5" stop-color="#ff3b30"/>
+                  <stop offset="1" stop-color="#8a1512"/>
+                </linearGradient>
+              </defs>
+              <rect width="600" height="180" fill="#0b0b0d"/>
+              <g fill="url(#redWave)">
+                <rect x="55" y="80" width="10" height="20" rx="5"/>
+                <rect x="82" y="54" width="10" height="72" rx="5"/>
+                <rect x="109" y="68" width="10" height="44" rx="5"/>
+                <rect x="136" y="32" width="10" height="116" rx="5"/>
+                <rect x="163" y="58" width="10" height="64" rx="5"/>
+                <rect x="190" y="15" width="10" height="150" rx="5"/>
+                <rect x="217" y="43" width="10" height="94" rx="5"/>
+                <rect x="244" y="66" width="10" height="48" rx="5"/>
+                <rect x="271" y="30" width="10" height="120" rx="5"/>
+                <rect x="298" y="8" width="10" height="164" rx="5"/>
+                <rect x="325" y="33" width="10" height="114" rx="5"/>
+                <rect x="352" y="59" width="10" height="62" rx="5"/>
+                <rect x="379" y="42" width="10" height="96" rx="5"/>
+                <rect x="406" y="64" width="10" height="52" rx="5"/>
+                <rect x="433" y="78" width="10" height="24" rx="5"/>
+                <rect x="460" y="57" width="10" height="66" rx="5"/>
+                <rect x="487" y="75" width="10" height="30" rx="5"/>
+                <rect x="514" y="84" width="10" height="12" rx="5"/>
+              </g>
+            </svg>
+          </div>
+          <div class="app-copy">
+            <h3>耳に当てるだけで、<br />音声メモが残る。</h3>
+            <p>近接センサーで録音と保存を自然につなぐ、プライベートなオフライン音声メモ。</p>
+          </div>
+          <div class="features">
+            <span>自動録音</span>
+            <span>文字起こし</span>
+            <span>オフライン</span>
+          </div>
+          <a class="arrow-link" href="#ear-recorder-faq" aria-label="Ear RecorderのFAQへ移動" title="Ear RecorderのFAQへ移動">↗</a>
+        </article>
+
+        <!-- App 2: AudioVisualizer -->
+        <article class="app-card blue">
+          <div class="card-top">
+            <p class="app-label"><i class="dot"></i>AUDIOVISUALIZER</p>
+            <span class="card-icon">≋</span>
+          </div>
+          <div class="artwork">
+            <svg viewBox="0 0 600 180" role="img" aria-label="青紫の音声スペクトラム">
+              <defs>
+                <linearGradient id="spectrum">
+                  <stop stop-color="#18b8ff"/>
+                  <stop offset=".55" stop-color="#7767ff"/>
+                  <stop offset="1" stop-color="#ee54d8"/>
+                </linearGradient>
+              </defs>
+              <rect width="600" height="180" fill="#090a11"/>
+              <g fill="url(#spectrum)">
+                <rect x="55" y="72" width="10" height="36" rx="5"/>
+                <rect x="82" y="42" width="10" height="96" rx="5"/>
+                <rect x="109" y="58" width="10" height="64" rx="5"/>
+                <rect x="136" y="25" width="10" height="130" rx="5"/>
+                <rect x="163" y="48" width="10" height="84" rx="5"/>
+                <rect x="190" y="14" width="10" height="152" rx="5"/>
+                <rect x="217" y="37" width="10" height="106" rx="5"/>
+                <rect x="244" y="63" width="10" height="54" rx="5"/>
+                <rect x="271" y="31" width="10" height="118" rx="5"/>
+                <rect x="298" y="6" width="10" height="168" rx="5"/>
+                <rect x="325" y="35" width="10" height="110" rx="5"/>
+                <rect x="352" y="54" width="10" height="72" rx="5"/>
+                <rect x="379" y="28" width="10" height="124" rx="5"/>
+                <rect x="406" y="17" width="10" height="146" rx="5"/>
+                <rect x="433" y="47" width="10" height="86" rx="5"/>
+                <rect x="460" y="31" width="10" height="118" rx="5"/>
+                <rect x="487" y="65" width="10" height="50" rx="5"/>
+                <rect x="514" y="80" width="10" height="20" rx="5"/>
+              </g>
+            </svg>
+          </div>
+          <div class="app-copy">
+            <h3>音を、リアルタイムに<br />目で楽しむ。</h3>
+            <p>マイクや音楽ファイルに反応するスペクトラムで、音の表情を鮮やかに可視化。</p>
+          </div>
+          <div class="features">
+            <span>リアルタイム</span>
+            <span>ビジュアライザー</span>
+            <span>ファイル再生</span>
+          </div>
+          <a class="arrow-link blue" href="#audiovisualizer-faq" aria-label="AudioVisualizerのFAQへ移動" title="AudioVisualizerのFAQへ移動">↗</a>
+        </article>
+
+        <!-- App 3: Video Info Intro Maker -->
+        <article class="app-card amber">
+          <div class="card-top">
+            <p class="app-label"><i class="dot"></i>VIDEO INFO INTRO MAKER</p>
+            <span class="card-icon">⧉</span>
+          </div>
+          <div class="artwork">
+            <svg viewBox="0 0 600 180" role="img" aria-label="シネマティック動画と撮影情報インスペクター">
+              <defs>
+                <linearGradient id="amberGlow" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#ff9f0a"/>
+                  <stop offset="100%" stop-color="#ff6b00"/>
+                </linearGradient>
+                <linearGradient id="screenBg" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#1c1d24"/>
+                  <stop offset="100%" stop-color="#0c0d12"/>
+                </linearGradient>
+              </defs>
+              <rect width="600" height="180" fill="#090a0f"/>
+              
+              <!-- 動画プレビュー画面（左〜中央） -->
+              <g transform="translate(45, 20)">
+                <rect width="280" height="140" rx="10" fill="url(#screenBg)" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
+                <!-- シネマレティクル・ファインダー枠 -->
+                <path d="M 20 20 L 32 20 M 20 20 L 20 32 M 260 20 L 248 20 M 260 20 L 260 32 M 20 120 L 32 120 M 20 120 L 20 108 M 260 120 L 248 120 M 260 120 L 260 108" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-linecap="round"/>
+                <!-- 中央再生サークル -->
+                <circle cx="140" cy="70" r="22" fill="rgba(255,159,10,0.14)" stroke="rgba(255,159,10,0.45)" stroke-width="1.5"/>
+                <polygon points="135,61 149,70 135,79" fill="#ff9f0a"/>
+                <!-- タイムコードバッジ -->
+                <rect x="22" y="104" width="46" height="15" rx="3" fill="rgba(0,0,0,0.65)"/>
+                <text x="45" y="115" font-family="Outfit, sans-serif" font-size="9" fill="#ff9f0a" font-weight="700" text-anchor="middle">REC 4K</text>
+              </g>
+              
+              <!-- 右側HUDインスペクターパネル（スライドイン） -->
+              <g transform="translate(350, 20)">
+                <rect width="195" height="140" rx="10" fill="rgba(24, 25, 32, 0.96)" stroke="rgba(255,159,10,0.35)" stroke-width="1.5"/>
+                <!-- ヘッダー：日時＆ファイル形式バッジ -->
+                <circle cx="18" cy="18" r="3" fill="#ff9f0a"/>
+                <rect x="28" y="15" width="70" height="6" rx="3" fill="rgba(255,255,255,0.5)"/>
+                <rect x="135" y="13" width="45" height="10" rx="3" fill="rgba(255,159,10,0.22)"/>
+                <text x="157.5" y="21" font-family="Outfit, sans-serif" font-size="7.5" fill="#ff9f0a" font-weight="700" text-anchor="middle">MXF</text>
+                
+                <!-- カメラカード -->
+                <rect x="12" y="32" width="171" height="49" rx="5" fill="rgba(255,255,255,0.06)"/>
+                <!-- カメラ名行 -->
+                <rect x="20" y="38" width="60" height="5" rx="2.5" fill="rgba(255,255,255,0.85)"/>
+                <line x1="12" y1="48" x2="183" y2="48" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+                <!-- レンズ行 -->
+                <rect x="20" y="53" width="85" height="4" rx="2" fill="rgba(255,255,255,0.45)"/>
+                <line x1="12" y1="62" x2="183" y2="62" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+                <!-- 4分割露出バー -->
+                <rect x="16" y="66" width="34" height="10" rx="2" fill="rgba(255,159,10,0.15)"/>
+                <rect x="54" y="66" width="34" height="10" rx="2" fill="rgba(255,159,10,0.15)"/>
+                <rect x="92" y="66" width="34" height="10" rx="2" fill="rgba(255,159,10,0.15)"/>
+                <rect x="130" y="66" width="34" height="10" rx="2" fill="rgba(255,159,10,0.15)"/>
+                <text x="33" y="74" font-family="Outfit, sans-serif" font-size="6.5" fill="#ff9f0a" text-anchor="middle">ISO</text>
+                <text x="71" y="74" font-family="Outfit, sans-serif" font-size="6.5" fill="#ff9f0a" text-anchor="middle">24mm</text>
+                <text x="109" y="74" font-family="Outfit, sans-serif" font-size="6.5" fill="#ff9f0a" text-anchor="middle">f/1.8</text>
+                <text x="147" y="74" font-family="Outfit, sans-serif" font-size="6.5" fill="#ff9f0a" text-anchor="middle">1/50</text>
+                
+                <!-- マップカード -->
+                <rect x="12" y="88" width="171" height="42" rx="5" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+                <line x1="12" y1="102" x2="183" y2="102" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+                <line x1="12" y1="117" x2="183" y2="117" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+                <line x1="68" y1="88" x2="68" y2="130" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+                <line x1="124" y1="88" x2="124" y2="130" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+                <!-- 赤い涙型マップピン -->
+                <path d="M 97 97 C 93 97 90 100 90 104 C 90 108.5 97 115 97 115 C 97 115 104 108.5 104 104 C 104 100 101 97 97 97 Z" fill="#ff3b30"/>
+                <circle cx="97" cy="103" r="2.5" fill="#ffffff"/>
+              </g>
+            </svg>
+          </div>
+          <div class="app-copy">
+            <h3>撮影情報を、動画の冒頭に<br />シネマティックに。</h3>
+            <p>カメラ・レンズ・露出値・位置情報を自動抽出し、映画のオープニングのようなHUD演出を合成。</p>
+          </div>
+          <div class="features">
+            <span>EXIF自動抽出</span>
+            <span>シネマHUD演出</span>
+            <span>マップ連携</span>
+          </div>
+          <a class="arrow-link amber" href="#video-info-intro-maker-faq" aria-label="Video Info Intro MakerのFAQへ移動" title="Video Info Intro MakerのFAQへ移動">↗</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq-section" id="faq">
+      <h2 class="section-title">よくあるご質問</h2>
+      <p class="intro">アプリごとの使い方や保存方法、利用できる機能についてご案内します。</p>
+      <div class="grid">
+        <!-- FAQ 1: Ear Recorder -->
+        <article class="faq-panel" id="ear-recorder-faq">
+          <p class="faq-eyebrow"><i class="dot"></i>EAR RECORDER</p>
+          <h3>Ear Recorder FAQ</h3>
+          <div class="faq-list">
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">録音はどうやって開始しますか？</button>
+              <div class="faq-answer"><div>アプリを起動した状態で、iPhoneを耳に近づけると近接センサーが検知し、録音と文字起こしが自動で始まります。</div></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">録音はどのように保存されますか？</button>
+              <div class="faq-answer"><div>iPhoneを耳から離すと録音が停止し、音声ファイルと文字起こし結果が端末内へ保存されます。保存完了は短いハプティクスでお知らせします。</div></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">音声や文字起こしは外部へ送信されますか？</button>
+              <div class="faq-answer"><div>いいえ。音声データと文字起こしテキストは端末内のローカルストレージに保存されます。外部サーバーへの送信は行いません。</div></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">文字起こしの内容を修正できますか？</button>
+              <div class="faq-answer"><div>はい。保存済みの録音を開き、「編集」から文字起こしテキストを手動で修正・保存できます。</div></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- FAQ 2: AudioVisualizer -->
+        <article class="faq-panel blue" id="audiovisualizer-faq">
+          <p class="faq-eyebrow"><i class="dot"></i>AUDIOVISUALIZER</p>
+          <h3>AudioVisualizer FAQ</h3>
+          <div class="faq-list">
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">マイク入力を可視化するには？</button>
+              <div class="faq-answer"><div>画面の「マイクを開始」をタップし、初回のみマイクへのアクセスを許可してください。入力音声に合わせてリアルタイムに表示が変化します。</div></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">無料版では何が利用できますか？</button>
+              <div class="faq-answer"><div>無料版ではマイク入力のビジュアライザー、マイク感度の調整、全画面表示を利用できます。ファイル再生や詳細な表示設定はフル機能で利用できます。</div></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">音楽ファイルを再生して可視化できますか？</button>
+              <div class="faq-answer"><div>フル機能では、音声ファイルやフォルダを取り込み、再生キューとして連続再生・リピートしながら可視化できます。</div></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">設定した見た目は保存されますか？</button>
+              <div class="faq-answer"><div>ビジュアライザーの設定は端末内に保存され、次回起動時にも引き継がれます。無料版ではマイク感度のみ調整できます。</div></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- FAQ 3: Video Info Intro Maker -->
+        <article class="faq-panel amber" id="video-info-intro-maker-faq">
+          <p class="faq-eyebrow"><i class="dot"></i>VIDEO INFO INTRO MAKER</p>
+          <h3>Video Info Intro Maker FAQ</h3>
+          <div class="faq-list">
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">動画の撮影情報はどうやって読み込まれますか？</button>
+              <div class="faq-answer"><div>写真ライブラリから動画を選択すると、動画ファイル内のEXIF・メタデータ（日時、カメラ機種名、レンズ、ISO、焦点距離、F値、シャッタースピード、位置情報など）を自動で抽出してパネルに反映します。</div></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">抽出された情報やマップの位置は編集できますか？</button>
+              <div class="faq-answer"><div>はい。カメラ名、レンズ名、露出パラメータなどはすべて手動で自由に修正・入力できます。また撮影場所もキーワード検索からピン位置や地図の縮尺を直感的に変更可能です。</div></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">どのような動画形式に対応していますか？</button>
+              <div class="faq-answer"><div>iPhoneで撮影した標準的な動画（MOV、MP4）に対応しています。またフォーマットバッジはMOVやMXFなどのシネマカメラ表記にもカスタマイズできます。</div></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">動画や位置情報データは外部に送信されますか？</button>
+              <div class="faq-answer"><div>いいえ。すべてのメタデータ抽出、アニメーションレンダリング、動画合成処理は端末内（ローカル）で完結します。動画や位置情報が外部サーバーへ送信されることは一切ありません。</div></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+      <h2 class="section-title">お問い合わせサポート</h2>
+      <div class="contact-card">
+        <p>不具合のご報告や機能に関するご質問は、メールでお寄せください。</p>
+        <a class="mail" href="mailto:masatx@gmail.com">✉ masatx@gmail.com</a>
+        <small>通常1〜3営業日以内にご返信します。</small>
+      </div>
+    </section>
   </main>
-  <footer><span>© 2026 Masa. All rights reserved.</span><a href="#top">ページ上部へ ↑</a></footer>
+
+  <footer>
+    <span>© 2026 Masa. All rights reserved.</span>
+    <a href="#top">ページ上部へ ↑</a>
+  </footer>
+
   <script>
-    document.querySelectorAll('.faq-question').forEach(function(button){button.addEventListener('click',function(){var item=button.parentElement;var opened=item.classList.toggle('open');button.setAttribute('aria-expanded',opened?'true':'false')})})
+    document.querySelectorAll('.faq-question').forEach(function(button) {
+      button.addEventListener('click', function() {
+        var item = button.parentElement;
+        var opened = item.classList.toggle('open');
+        button.setAttribute('aria-expanded', opened ? 'true' : 'false');
+      });
+    });
   </script>
 </body>
 </html>
